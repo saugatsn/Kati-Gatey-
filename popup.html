@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kati Gatey?</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>कति गते?</h1>
+        <button class="btn btn-language" id="language-toggle-btn">EN</button>
+      </div>
+
+      <div class="date-display">
+        <div class="nepali-date" id="nepali-date">Loading...</div>
+        <div class="english-date" id="english-date">Loading...</div>
+      </div>
+
+      <div class="button-container">
+        <button class="btn btn-primary" id="calendar-btn">
+          पात्रो हेर्नुहोस्
+        </button>
+        <button class="btn btn-secondary" id="converter-btn">मिति रूपान्तरण</button>
+        <button class="btn btn-info" id="time-btn">समय देखाउनुहोस्</button>
+      </div>
+
+      <div class="converter-container hidden" id="converter-container">
+        <div class="converter-section">
+          <h3>BS to AD Converter</h3>
+          <div class="input-group">
+            <input type="number" id="bs-year" placeholder="वर्ष (Year)" min="2000" max="2100">
+            <input type="number" id="bs-month" placeholder="महिना (Month)" min="1" max="12">
+            <input type="number" id="bs-day" placeholder="दिन (Day)" min="1" max="32">
+            <button class="btn btn-convert" id="bs-to-ad-btn">Convert to AD</button>
+          </div>
+          <div class="result" id="bs-to-ad-result"></div>
+        </div>
+        
+        <div class="converter-section">
+          <h3>AD to BS Converter</h3>
+          <div class="input-group">
+            <div class="input-label">AD Date</div>
+            <input type="number" id="ad-year" placeholder="YYYY" min="1900" max="2100">
+            <input type="number" id="ad-month" placeholder="MM" min="1" max="12">
+            <input type="number" id="ad-day" placeholder="DD" min="1" max="31">
+            <button class="btn btn-convert" id="ad-to-bs-btn">Convert to BS</button>
+          </div>
+          <div class="result" id="ad-to-bs-result"></div>
+        </div>
+        
+        <button class="btn btn-secondary close-btn" id="close-converter-btn">बन्द गर्नुहोस्</button>
+      </div>
+
+      <div class="time-container hidden" id="time-container">
+        <div class="time-display">
+          <div class="current-time" id="current-time">Loading...</div>
+          <div class="time-zone" id="time-zone">Nepal Time</div>
+        </div>
+        <div class="quick-actions">
+          <button class="btn btn-small" id="copy-date-btn">मिति कपी गर्नुहोस्</button>
+          <button class="btn btn-small" id="copy-time-btn">समय कपी गर्नुहोस्</button>
+        </div>
+        <button class="btn btn-secondary close-btn" id="close-time-btn">बन्द गर्नुहोस्</button>
+      </div>
+
+      <div class="calendar-container hidden" id="calendar-container">
+        <!-- Calendar will be inserted here -->
+      </div>
+    </div>
+
+    <script src="nepali-date.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
